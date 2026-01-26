@@ -1,0 +1,30 @@
+.container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.star {
+  position: absolute;
+  transform: translate(-50%, -50%);
+   animation: fall 3.0s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.starSvg {
+  width: 18px;
+  height: 18px;
+  stroke: #9da6ee;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(40px) rotate(120deg)
+      scale(0.6);
+  }
+}
