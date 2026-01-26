@@ -1,5 +1,8 @@
+'use client';
+
 import { Playfair_Display, Caveat } from "next/font/google";
 import { LinkedinIcon, ThankYouNote } from "../../../public/svg/Thanks";
+import { useInView } from "./hooks/useInView";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -13,10 +16,12 @@ const caveat = Caveat({
 });
 
 export default function ThankYouSection() {
+
+  const { ref, isVisible } = useInView({ threshold: 0.3 });
   return (
     <section
-      className={`${playfair.variable} ${caveat.variable}
-      relative min-h-screen bg-[#2f2f2f] text-[#f4f2ee]`}
+       ref={ref}
+      className={`${playfair.variable} ${caveat.variable} relative min-h-screen bg-[#2f2f2f] text-[#f4f2ee] transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
     >
 
       {/* ─── SECTION START : vertical dividers only ─── */}

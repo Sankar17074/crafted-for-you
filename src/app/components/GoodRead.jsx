@@ -1,8 +1,12 @@
 'use client';
-import {MusicIcon, QuoteFour, QuoteOne, QuoteThree, QuoteTwo, Star} from "../../../public/svg/Handquotes";
+
+import { QuoteFour, QuoteOne, QuoteThree, QuoteTwo, Star} from "../../../public/svg/Handquotes";
+import { useInView } from "./hooks/useInView";
 import MultiLineUnderline from "./MultiLineUnderliner";
 
 export default function GoodRead() {
+
+    const { ref, isVisible } = useInView({ threshold: 0.3 });
 
     function HandSvgWrapper({ children, className = "" }) {
         return (
@@ -10,9 +14,12 @@ export default function GoodRead() {
             <div className="w-full h-auto">{children}</div>
             </div>
         );
-}
+    }
   return (
-      <section className="min-h-screen bg-[#f8f6f4] flex flex-col px-6 md:px-16">
+      <section 
+        ref={ref}
+        className={`min-h-screen bg-[#f8f6f4] transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"} flex flex-col px-6 md:px-16`}
+      >
 
       {/* Separator line */}
      <div className="mt-auto relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[0.8px] bg-[#81807c] z-20" />

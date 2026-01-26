@@ -1,3 +1,5 @@
+'use client';
+
 import { Playfair_Display, Caveat } from "next/font/google";
 import CvIcon from "../../../public/svg/Cvicon";
 import StarIcon from "../../../public/svg/Starportfolio";
@@ -5,6 +7,7 @@ import Scribble from "../../../public/svg/Scribble";
 import Smilee from "../../../public/svg/Smilee";
 import Name from "../../../public/svg/Name";
 import Handcircle from "../../../public/svg/Handcircle";
+import { useInView } from "./hooks/useInView";
 
 /* Fonts (inline to component) */
 const playfair = Playfair_Display({
@@ -19,9 +22,12 @@ const caveat = Caveat({
 });
 
 export default function PortfolioCover() {
+
+         const { ref, isVisible } = useInView({ threshold: 0.3 });
     return (
         <section
-            className={`${playfair.variable} ${caveat.variable} relative min-h-screen bg-[#2f2f2f] text-[#f4f2ee] overflow-hidden flex flex-col pb-15`}
+        ref={ref}
+        className={`${playfair.variable} ${caveat.variable} transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"} relative min-h-screen bg-[#2f2f2f] text-[#f4f2ee] overflow-hidden flex flex-col pb-15`}
         >
             <div className="relative w-full h-24 text-[#f4efec]">
 
