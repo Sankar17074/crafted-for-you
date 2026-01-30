@@ -52,7 +52,7 @@ export default function GoodRead() {
 
             {/* Small line with hand underlined */}
             <div className="mt-16 inline-block text-lg md:text-xl text-gray-700 font-serif">
-                <MultiLineUnderline>
+                <MultiLineUnderline animate={isVisible}>
                     Still learning. Still refining. Always interested.
                 </MultiLineUnderline>
             </div>

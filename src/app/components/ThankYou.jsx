@@ -21,7 +21,7 @@ export default function ThankYouSection() {
   return (
     <section
        ref={ref}
-      className={`${playfair.variable} ${caveat.variable} relative min-h-screen bg-[#2f2f2f] text-[#f4f2ee] transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
+      className={`${playfair.variable} ${caveat.variable} relative min-h-screen px-6 md:px-16 bg-[#2f2f2f] text-[#f4f2ee] transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
     >
 
       {/* ─── SECTION START : vertical dividers only ─── */}

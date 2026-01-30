@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import React from "react";
 import Underlinesvg from "../../../public/svg/HandUnderline";
 
 export default function MultiLineUnderline({
   children,
+  animate = false,
 }: {
   children: string;
+   animate?: boolean;
 }) {
   const textRef = useRef<HTMLSpanElement>(null);
   const [lines, setLines] = useState<
@@ -72,7 +73,7 @@ export default function MultiLineUnderline({
             width: line.width,
           }}
         >
-          <Underlinesvg/>
+          <Underlinesvg animate={animate} delay={i * 120} />
         </span>
       ))}
     </span>

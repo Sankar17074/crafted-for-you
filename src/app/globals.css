@@ -5,6 +5,10 @@
   --foreground: #171717;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -41,6 +45,7 @@ body {
   background-size: contain;
 }
 
+/* for softbounce linkedin icon */
 @keyframes softBounce {
   0%, 100% {
     transform: translateY(0);
@@ -54,13 +59,50 @@ body {
   animation: softBounce 1.5s ease-in-out infinite;
 }
 
+/* for hand underline animation */
 .underline-path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: draw 1s ease forwards;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
 }
 
-@keyframes draw {
+.underline-path.draw {
+   animation: draw-line 4.5s cubic-bezier(0.3, 0.05, 0.1, 1) forwards;
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* for device warning overlay */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}
+
+.star-draw {
+  fill: none;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: drawStar 2.5s ease-out forwards;
+}
+
+@keyframes drawStar {
   to {
     stroke-dashoffset: 0;
   }
