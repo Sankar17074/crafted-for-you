@@ -107,3 +107,28 @@ body {
     stroke-dashoffset: 0;
   }
 }
+
+.intro-star.star-exit {
+  animation: starExpand 1.2s ease-in-out forwards;
+}
+
+@keyframes starExpand {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(14);
+    opacity: 0;
+  }
+}
+
+/* overlay fade */
+.intro-overlay {
+  transition: opacity 1.2s ease;
+}
+
+.intro-overlay.intro-exit {
+  opacity: 0;
+  pointer-events: none;
+}

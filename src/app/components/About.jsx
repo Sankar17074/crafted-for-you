@@ -62,7 +62,7 @@ export default function About() {
           </p>
 
           <p className="mt-6 text-xl text-gray-700 leading-relaxed font-serif">
-         Beyond screens and code, I’m drawn to slower joys.I’m someone who believes in the beauty of small gestures — handwritten notes, meaningful gifts, and words that stay long after they’re read
+         Beyond screens and code, I’m drawn to slower joys.I’m someone who believes in the beauty of small gestures — handwritten notes, meaningful gifts, and words that stay long after they’re read.
            <MultiLineUnderline animate={isVisible}>
              For me, learning never really stops; it shows up in new challenges, fresh perspectives, and moments that gently push me to grow.
             </MultiLineUnderline>

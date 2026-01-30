@@ -15,10 +15,17 @@ export default function Home() {
   const [phase, setPhase] = useState("intro");
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < DESKTOP_WIDTH) {
-        setPhase("warning");
-      }
+   const handleResize = () => {
+      setPhase((prev) => {
+        const isDesktop = window.innerWidth >= DESKTOP_WIDTH;
+
+        if (!isDesktop) return "warning";
+
+        // back to desktop
+        if (prev === "warning") return "intro";
+
+        return prev;
+      });
     };
 
     handleResize(); // initial check
