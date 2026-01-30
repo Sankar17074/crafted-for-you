@@ -95,6 +95,7 @@ body {
   animation: bounce 1.5s infinite;
 }
 
+/* This one is for star drawing and expansion on landing star */
 .star-draw {
   fill: none;
   stroke-dasharray: 1;
