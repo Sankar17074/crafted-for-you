@@ -8,6 +8,7 @@ import Smilee from "../../../public/svg/Smilee";
 import Name from "../../../public/svg/Name";
 import Handcircle from "../../../public/svg/Handcircle";
 import { useInView } from "./hooks/useInView";
+import { motion } from "framer-motion";
 
 /* Fonts (inline to component) */
 const playfair = Playfair_Display({
@@ -25,9 +26,11 @@ export default function PortfolioCover() {
 
          const { ref, isVisible } = useInView({ threshold: 0.3 });
     return (
-        <section
-        ref={ref}
-        className={`${playfair.variable} ${caveat.variable} transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"} relative min-h-screen bg-[#2f2f2f] text-[#f4f2ee] overflow-hidden flex flex-col pb-15`}
+        <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.6, ease: "easeOut" }}
+        className={`${playfair.variable} ${caveat.variable} relative min-h-screen bg-[#2f2f2f] text-[#f4f2ee] overflow-hidden flex flex-col pb-15`}
         >
             <div className="relative w-full h-24 text-[#f4efec]">
 
@@ -74,7 +77,15 @@ export default function PortfolioCover() {
                             <Name />
                         </span>
                     </span>
-                <h1 className="font-[var(--font-playfair)] text-[10rem] leading-none tracking-tight">
+                <h1 
+                // initial={{ opacity: 0, filter: "blur(10px)" }}
+                // animate={{ opacity: 1, filter: "blur(0px)" }}
+                // transition={{
+                //     delay: 0,
+                //     duration: 1.8,
+                //     ease: "easeOut",
+                // }}
+                className="font-[var(--font-playfair)] text-[10rem] leading-none tracking-tight">
                     P
                     <span className="relative inline-block mx-2">
                         o
@@ -117,6 +128,6 @@ export default function PortfolioCover() {
                 </div>
             </div>
             <div className="mt-auto w-full h-[0.8px] bg-[#f4efec] z-20" />
-        </section>
+        </motion.section>
     );
 }
