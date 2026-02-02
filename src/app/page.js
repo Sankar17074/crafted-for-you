@@ -10,18 +10,23 @@ import ThankYou from "./components/ThankYou";
 import IntroSketch from "./components/IntroSketch";
 
 const DESKTOP_WIDTH = 1024;
+const STORAGE_KEY = "deviceWarningDismissed";
 
 export default function Home() {
   const [phase, setPhase] = useState("intro");
 
   useEffect(() => {
    const handleResize = () => {
+      const isDesktop = window.innerWidth >= DESKTOP_WIDTH;
+      const dismissed = sessionStorage.getItem(STORAGE_KEY);
+
       setPhase((prev) => {
-        const isDesktop = window.innerWidth >= DESKTOP_WIDTH;
+        if (!isDesktop) {
+          // show warning ONLY if user has NOT dismissed
+          if (!dismissed) return "warning";
+          return prev;
+        }
 
-        if (!isDesktop) return "warning";
-
-        // back to desktop
         if (prev === "warning") return "intro";
 
         return prev;
