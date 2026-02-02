@@ -48,7 +48,7 @@ export default function PortfolioCover() {
 
                     {/* add padding-top to keep text away from the horizontal line */}
                     <div className="flex items-center font-medium justify-start m-8 md:m-12 lg:m-15 pt-3">
-                        2026
+                    {new Date().getFullYear()}
                     </div>
 
                     <div className="flex items-center font-medium justify-center pt-3">
@@ -77,15 +77,7 @@ export default function PortfolioCover() {
                             <Name />
                         </span>
                     </span>
-                <h1 
-                // initial={{ opacity: 0, filter: "blur(10px)" }}
-                // animate={{ opacity: 1, filter: "blur(0px)" }}
-                // transition={{
-                //     delay: 0,
-                //     duration: 1.8,
-                //     ease: "easeOut",
-                // }}
-                className="font-[var(--font-playfair)] text-[10rem] leading-none tracking-tight">
+                <h1 className="font-[var(--font-playfair)] text-[10rem] leading-none tracking-tight">
                     P
                     <span className="relative inline-block mx-2">
                         o
