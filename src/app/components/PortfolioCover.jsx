@@ -30,7 +30,7 @@ export default function PortfolioCover() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.6, ease: "easeOut" }}
-        className={`${playfair.variable} ${caveat.variable} relative min-h-screen bg-[#2f2f2f] text-[#f4f2ee] overflow-hidden flex flex-col pb-15`}
+        className={`${playfair.variable} ${caveat.variable} relative min-h-[var(--vh)] bg-[#2f2f2f] text-[#f4f2ee] overflow-x-hidden flex flex-col pb-15`}
         >
             <div className="relative w-full h-24 text-[#f4efec]">
 

@@ -15,7 +15,7 @@ export default function About() {
   return (
     <section
       ref={ref}
-      className="min-h-screen bg-[#f8f6f4] flex items-center px-6 md:px-16"
+      className="min-h-[var(--vh)] bg-[#f8f6f4] flex items-center px-6 md:px-16"
     >
       <motion.div
         initial="hidden"

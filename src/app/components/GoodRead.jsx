@@ -18,7 +18,7 @@ export default function GoodRead() {
   return (
       <section 
         ref={ref}
-        className={`min-h-screen bg-[#f8f6f4] transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"} flex flex-col px-6 md:px-16`}
+        className={`min-h-[var(--vh)] bg-[#f8f6f4] transition-all duration-1000 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"} flex flex-col px-6 md:px-16`}
       >
 
       {/* Separator line */}
