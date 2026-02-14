@@ -18,7 +18,7 @@ export default function Creative({ animate = false }) {
     };
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="139.465" height="116" viewBox="-50.701 117.153 69.733 58">
-            <g fill="none" stroke="#9aa2ed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <g fill="none" stroke="#9da6ee" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <motion.path
                     variants={draw}
                     initial="hidden"

@@ -17,7 +17,7 @@ export default function Mativated({animate = false}) {
     };
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="138.191" viewBox="-46.516 108.34 100 69.096">
-      <g fill="none" stroke="#9aa2ed" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <g fill="none" stroke="#9da6ee" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <motion.path
           variants={draw}
           initial="hidden"

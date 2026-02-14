@@ -11,7 +11,7 @@ export default function Handcircle() {
                 animate={{ pathLength: 1, opacity: 1 }}
                 transition={{ delay: 2.5, duration: 1.2, ease: "easeInOut" }}
                 fill="none"
-                stroke="#9aa2ed"
+                stroke="#9da6ee"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
