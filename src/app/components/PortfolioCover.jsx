@@ -7,7 +7,6 @@ import Scribble from "../../../public/svg/Scribble";
 import Smilee from "../../../public/svg/Smilee";
 import Name from "../../../public/svg/Name";
 import Handcircle from "../../../public/svg/Handcircle";
-import { useInView } from "./hooks/useInView";
 import { motion } from "framer-motion";
 
 /* Fonts (inline to component) */
@@ -23,8 +22,6 @@ const caveat = Caveat({
 });
 
 export default function PortfolioCover() {
-
-         const { ref, isVisible } = useInView({ threshold: 0.3 });
     return (
         <motion.section
         initial={{ opacity: 0 }}
@@ -95,7 +92,7 @@ export default function PortfolioCover() {
                     l
                     <span className="relative inline-block mx-2">
                         i
-                        <span className="absolute left-1/2 -translate-x-1/2 top-0 -translate-y-[0.4em]">
+                        <span className="absolute left-1/2 -translate-x-1/2 top-3 -translate-y-[0.4em]">
                             <span className="w-[0.55em] h-[0.55em]">
                                 <Scribble />
                             </span>

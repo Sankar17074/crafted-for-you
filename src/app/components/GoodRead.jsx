@@ -67,9 +67,6 @@ export default function GoodRead() {
             <HandSvgWrapper className="absolute top-16 right-[-60] rotate-[2deg]">
                 <QuoteTwo />
             </HandSvgWrapper>
-            {/* <HandSvgWrapper className="absolute top-32 left-20 rotate-[-1deg]">
-                <MusicIcon />
-            </HandSvgWrapper> */}
             <HandSvgWrapper className="absolute top-54 left-10 rotate-[6deg]">
                 <QuoteThree />
             </HandSvgWrapper>
