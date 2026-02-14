@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://craftedbysankar.com"),
-  title: "Crafted by Sankar | happiness & joy",
+  title: "Crafted by Sankar | pencil & paper",
   description:
     "Sankar Dass is a Frontend Developer who scribbles ideas into code — crafting calm, thoughtful, and intuitively designed digital experiences.",
  alternates: {
